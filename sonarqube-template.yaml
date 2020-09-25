@@ -76,7 +76,7 @@ objects:
             value: "${POSTGRESQL_PASSWORD}"
           - name: POSTGRESQL_DATABASE
             value: "${POSTGRESQL_DATABASE}"
-          image: registry.access.redhat.com/rhscl/postgresql-95-rhel7@sha256:a0bfc4aa195737c802988f7c636073644d7a821061d801004277c98d776c9cbf
+          image: registry.access.redhat.com/rhscl/postgresql-96-rhel7:latest
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3
