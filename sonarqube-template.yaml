@@ -17,7 +17,7 @@ objects:
     output:
       to:
         kind: "ImageStreamTag"
-        name: "sonarqube:7.9.4-community"
+        name: "sonarqube:latest"
     triggers:
     - type: ImageChange
     - type: ConfigChange
@@ -29,7 +29,7 @@ objects:
     name: sonarqube
   spec:
     tags:
-    - name: "7.9.4-community"
+    - name: "latest"
       annotations: null
       importPolicy:
         insecure: true
@@ -159,7 +159,7 @@ objects:
             value: "jdbc:postgresql://${DATABASE_SERVICE_NAME}/${POSTGRESQL_DATABASE}"
           - name: SONARQUBE_JDBC_USERNAME
             value: "${POSTGRESQL_USER}"
-          image: sonarqube:7.9.4-community
+          image: sonarqube:latest
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3
@@ -206,7 +206,7 @@ objects:
         - sonarqube
         from:
           kind: ImageStreamTag
-          name: sonarqube:7.9.4-community
+          name: sonarqube:latest
       type: ImageChange
 - kind: Service
   apiVersion: v1
