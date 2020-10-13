@@ -17,7 +17,7 @@ objects:
     output:
       to:
         kind: "ImageStreamTag"
-        name: "sonarqube:latest"
+        name: "sonarqube:7.9.4-community"
     triggers:
     - type: ImageChange
     - type: ConfigChange
@@ -29,7 +29,7 @@ objects:
     name: sonarqube
   spec:
     tags:
-    - name: "latest"
+    - name: "7.9.4-community"
       annotations: null
       importPolicy:
         insecure: true
