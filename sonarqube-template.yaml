@@ -159,7 +159,7 @@ objects:
             value: "jdbc:postgresql://${DATABASE_SERVICE_NAME}/${POSTGRESQL_DATABASE}"
           - name: SONARQUBE_JDBC_USERNAME
             value: "${POSTGRESQL_USER}"
-          image: sonarqube:latest
+          image: sonarqube:7.9.4-community
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3
