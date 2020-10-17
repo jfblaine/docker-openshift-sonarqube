@@ -1,8 +1,7 @@
 FROM docker.io/centos:7
 LABEL maintainer="Wolfgang Kulhanek <WolfgangKulhanek@gmail.com>"
 
-# ENV SONAR_VERSION=7.9.2 \
-ENV SONAR_VERSION=8.4.2.36762 \
+ENV SONAR_VERSION=8.5.0.37579 \
     SONARQUBE_HOME=/opt/sonarqube
 
 LABEL name="SonarQube" \
